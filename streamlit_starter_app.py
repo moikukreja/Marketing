@@ -38,20 +38,20 @@ def load_data():
     data = {}
     
     # Update these paths to match your data location
-    data_path = "data/"  # Change this to your data folder path
+      # Change this to your data folder path
     
     try:
-        data['campaigns'] = pd.read_csv(f"{data_path}campaign_performance.csv", parse_dates=['date'])
-        data['customers'] = pd.read_csv(f"{data_path}customer_data.csv")
-        data['products'] = pd.read_csv(f"{data_path}product_sales.csv")
-        data['leads'] = pd.read_csv(f"{data_path}lead_scoring_results.csv")
-        data['feature_importance'] = pd.read_csv(f"{data_path}feature_importance.csv")
-        data['learning_curve'] = pd.read_csv(f"{data_path}learning_curve.csv")
-        data['geographic'] = pd.read_csv(f"{data_path}geographic_data.csv")
-        data['attribution'] = pd.read_csv(f"{data_path}channel_attribution.csv")
-        data['funnel'] = pd.read_csv(f"{data_path}funnel_data.csv")
-        data['journey'] = pd.read_csv(f"{data_path}customer_journey.csv")
-        data['correlation'] = pd.read_csv(f"{data_path}correlation_matrix.csv", index_col=0)
+        data['campaigns'] = pd.read_csv(f"campaign_performance.csv", parse_dates=['date'])
+        data['customers'] = pd.read_csv(f"customer_data.csv")
+        data['products'] = pd.read_csv(f"product_sales.csv")
+        data['leads'] = pd.read_csv(f"lead_scoring_results.csv")
+        data['feature_importance'] = pd.read_csv(f"feature_importance.csv")
+        data['learning_curve'] = pd.read_csv(f"learning_curve.csv")
+        data['geographic'] = pd.read_csv(f"geographic_data.csv")
+        data['attribution'] = pd.read_csv(f"channel_attribution.csv")
+        data['funnel'] = pd.read_csv(f"funnel_data.csv")
+        data['journey'] = pd.read_csv(f"customer_journey.csv")
+        data['correlation'] = pd.read_csv(f"correlation_matrix.csv", index_col=0)
         
         return data
     except FileNotFoundError as e:
